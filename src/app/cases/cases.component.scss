@@ -1,0 +1,73 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center;    /* Center content horizontally */
+    height: 70vh;          /* Full viewport height */
+  }
+  
+  .h1 {
+    margin-top: 5px;
+    font-size: 24px;
+    color: #333; /* Dark color for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  .form-container {
+    background-color: #ffffff; /* White background for the form container */
+    border-radius: 12px;      /* Rounded corners for the form container */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Floating shadow effect */
+    padding: 20px;            /* Space inside the form container */
+    width: 400px;             /* Fixed width for the form container */
+    max-width: 100%;          /* Ensure responsiveness */
+    box-sizing: border-box;  /* Include padding in the element's total width and height */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+  }
+  
+  input[type="text"], select, textarea {
+    margin-bottom: 15px; /* Space between form elements */
+    padding: 10px;       /* Padding inside form elements */
+    border: 1px solid #ccc; /* Light border for inputs */
+    border-radius: 4px;  /* Rounded corners for inputs */
+  }
+  
+  textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    height: 100px;    /* Fixed height for textarea */
+  }
+  
+  input[type="file"] {
+    margin-bottom: 15px; /* Space below the file input */
+  }
+  
+  button {
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: #007bff; /* Blue background color */
+    color: white;      /* White text color */
+    border: none;      /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;   /* Pointer cursor on hover */
+    font-size: 16px;   /* Larger font size */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  select {
+    appearance: none; /* Remove default styling for select */
+    background-color: #ffffff; /* White background for select */
+    background-image: linear-gradient(45deg, transparent 50%, #007bff 50%), /* Custom arrow styling */
+                    linear-gradient(45deg, #007bff 50%, transparent 50%);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+  }
+  
+  select option:first-child {
+    color: #aaa; /* Light gray color for the placeholder option */
+  }

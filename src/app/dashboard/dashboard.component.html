@@ -1,0 +1,64 @@
+
+<p-carousel [value]="images">
+    <ng-template let-item pTemplate="item1">
+        <div>
+            <img [src]="item" [style]="{'align' :'center','height':'300px', 'width':'920px'}" alt="">
+
+        </div>
+    </ng-template>
+</p-carousel>
+
+
+<div class="p-grid">
+    <div class="p-col-4">
+        <p-card class="cards" [style]="{'background-color':'#f2df74'}">
+            <div>
+                <h3 class="heading"> High Court Complexes</h3>
+                <h2><b>39</b></h2>
+            </div>
+        </p-card>
+    </div>
+    <div class="p-col-4">
+        <p-card class="cards" [style]="{'background-color':'#903175'}">
+            <div>
+                <h3 class="heading">District Court Complexes</h3>
+                <h2><b>3561</b></h2>
+            </div>
+        </p-card>
+    </div>
+    <div class="p-col-4">
+        <p-card class="cards" [style]="{'background-color':'#156544'}">
+            <div>
+                <h3 class="heading">HC Pending Cases</h3>
+                <h2><b>6.11 M</b></h2>
+            </div>
+        </p-card>
+    </div>
+    <div class="p-col-4">
+        <p-card class="cards" [style]="{'background-color':'#7e4e0c'}">
+            <div>
+                <h3 class="heading">DC Pending Cases</h3>
+                <h2><b>44.42 M</b></h2>
+            </div>
+        </p-card>
+    </div>
+    <div class="p-col-4">
+        <p-card class="cards" [style]="{'background-color':'#A82426'}">
+            <div>
+                <h3 class="heading">DC Cases Listed Today</h3>
+                <h2><b>1.25 M</b></h2>
+            </div>
+        </p-card>
+    </div>
+    <div class="p-col-4">
+        <p-card class="cards" [style]="{'background-color':'#006080'}">
+            <div>
+                <h3 class="heading">HC Cases Listed Today</h3>
+                <h2><b>48.25 K</b></h2>
+            </div>
+        </p-card>
+    </div>
+
+</div>
+
+```

@@ -1,0 +1,34 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .top-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .profile-info {
+    flex-grow: 1;
+  }
+  
+  .user-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .profile-actions button {
+    margin-right: 10px;
+  }
+  

@@ -1,0 +1,16 @@
+@media screen and (min-width: 992px) {
+    .login {
+        margin-top: 13%;
+        display: flex;
+        // align-items: center;
+        // justify-content: flex-start;
+    }
+}
+@media (min-width: 400px) and (max-width: 992px) {
+    .login {
+        // margin-top: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

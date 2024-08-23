@@ -1,0 +1,53 @@
+<div class="layout-topbar">
+    <!-- Logo and menu button -->
+    <!-- <a class="layout-topbar-logo">
+        <img
+            id="layout-topbar-logo"
+            src="assets/layout/images/miracle-logo-dark.png"
+            alt="logo"
+        />
+    </a> -->
+
+    <a
+        class="layout-menu-button"
+        href="#"
+        (click)="appMain.onMenuButtonClick($event)"
+    >
+        <i class="pi pi-bars"></i>
+    </a>
+
+    <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input pInputText type="text" placeholder="Search..." />
+    </span>
+    
+
+    <p-overlayPanel #op [baseZIndex]="10000">
+        <ng-template pTemplate>
+            <div class="profile">
+                <div class="profile-actions">
+                    <ul>
+                        <li>
+                            <button (click)="viewProfile()">Profile</button>
+                        </li>
+                        <li>
+                            <button (click)="viewSettings()">Settings</button>
+                        </li>
+                        <li>
+                            <button (click)="logout()">Logout</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </ng-template>
+    </p-overlayPanel>
+    <span class="user-name">afcdx</span>
+
+    <a
+        id="user-menu-button"
+        (click)="op.toggle($event)"
+        class="layout-user-button"
+    >
+        <i class="pi pi-user"></i>
+    </a>
+</div>

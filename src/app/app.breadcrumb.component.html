@@ -1,0 +1,18 @@
+<div class="route-bar">
+    <div class="route-bar-breadcrumb">
+        <li>
+            <a routerLink="/voters">
+                <i class="pi pi-home" ></i>
+            </a>
+        </li>
+        <li>/</li>
+        <ng-template ngFor let-item let-last="last" [ngForOf]="items">
+            <li>
+                <a [routerLink]="item.routerLink" *ngIf="item.routerLink" style="color:#00aae7 ;">{{item.label}}</a>
+                <ng-container *ngIf="!item.routerLink" style="color:#00aae7 ;">{{item.label}}</ng-container>
+            </li>
+            <li *ngIf="!last">/</li>
+        </ng-template>
+        
+    </div>
+</div>

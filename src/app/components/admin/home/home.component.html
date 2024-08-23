@@ -1,0 +1,84 @@
+<div class="card-container">
+  <div class="card-row">
+      <p-card
+          *ngFor="let user of users"
+          class="p-card flex flex-column align-items-center"
+      >
+          <div class="card-content p-d-flex p-flex-column p-ai-center p-p-3">
+              <div class="image-styles">
+                  <img
+                      [src]="user.profile"
+                      alt="{{ user.firstName }}'s profile"
+                      class="p-mb-2"
+                  />
+              </div>
+              <div
+                  class="card-details p-d-flex p-flex-wrap p-jc-center p-gap-3"
+              >
+                  <div
+                      class="card-field"
+                      style="display: flex; margin-right: 14px"
+                  >
+                      <strong>{{ user.firstName }} {{ user.lastName }}</strong
+                      >&nbsp;
+                  </div>
+              </div>
+              <div>
+                  <div class="card-field">
+                      <p>
+                          <span
+                              ><i class="pi pi-phone"></i>
+                              &nbsp;{{ user.contact }}</span
+                          > &nbsp;
+                          <span
+                              ><i class="pi pi-briefcase"></i
+                              >&nbsp;{{ user.experience }}</span
+                          >
+                      </p>
+                  </div>
+              </div>
+
+              <p-button
+                  label="View More"
+                  icon="pi pi-info-circle"
+                  (click)="openUserDetail(user)"
+                  class="p-mt-2"
+              ></p-button>
+          </div>
+      </p-card>
+  </div>
+</div>
+<p-dialog
+  header="User Details"
+  [(visible)]="showModal"
+  [modal]="true"
+  [closable]="true"
+  [responsive]="true"
+  [style]="{ width: '50vw' }"
+  (onHide)="closeModal()"
+>
+  <div class="p-grid p-align-center" *ngIf="selectedUser">
+      <!-- Image section -->
+      <div class="p-col-fixed">
+          <img 
+              [src]="selectedUser.profile" 
+              alt="User Image" 
+              class="profile-image"
+              [style.width.px]="100" 
+              [style.height.px]="100"
+             
+          />
+      </div>
+      <!-- Details section -->
+      <div class="p-col">
+        <h4>{{selectedUser.firstName}} {{selectedUser.lastName}} </h4>
+          <div>
+            <strong>First Name:</strong> {{selectedUser.firstName}}<br>
+            <strong>Last Name:</strong> {{ selectedUser.lastName }}<br>
+              <strong>Email:</strong> {{selectedUser.email}}<br>
+              <strong>Contact:</strong> {{ selectedUser.contact }}<br>
+              <strong>Experience:</strong> {{ selectedUser.experience }}<br>
+          </div>
+      </div>
+  </div>
+</p-dialog>

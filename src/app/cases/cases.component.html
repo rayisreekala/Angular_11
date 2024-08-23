@@ -1,0 +1,47 @@
+ 
+<div class="main">
+    <h1 class="h1 style={margin-top:0px}">Upload Your Case Details</h1><br>
+  
+    <div class="form-container">
+      <form [formGroup]="myform" (ngSubmit)="fetch()">
+        <select formControlName="CaseType">
+          <option value="" disabled selected>Select Case Type</option>
+          <option value="Administrative Case">Administrative Case</option>
+          <option value="Civil Case">Civil Case</option>
+          <option value="Commercial Case">Commercial Case</option>
+          <option value="Common Case">Common Case</option>
+          <option value="Contract Case">Contract Case</option>
+          <option value="Constitutional Case">Constitutional Case</option>
+          <option value="Criminal Case">Criminal Case</option>
+          <option value="Equity & Trusts Case">Equity & Trusts Case</option>
+          <option value="Family Case">Family Case</option>
+          <option value="General Case">General Case</option>
+          <option value="International Case">International Case</option>
+          <option value="Labour & Employment Case">Labour & Employment Case</option>
+          <option value="Property Case">Property Case</option>
+          <option value="Religious Case">Religious Case</option>
+          <option value="Tort Case">Tort Case</option>
+        </select>
+  
+        <textarea placeholder="Description about the case" formControlName="description"></textarea>
+  
+        <select formControlName="Priority">
+          <option value="" disabled selected>Select Case Priority</option>
+           <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+        <select formControlName="LawyerType">
+          <option value="" disabled selected>Select Lawyer Preference </option>
+          <option value="Junior Lawyer">Junior Lawyer</option>
+          <option value="Associate Lawyer">Associate Lawyer</option>
+          <option value=" Senior Associate Lawyer"> Senior Associate Lawyer</option>
+          <option value="Legal Consultant">Legal Consultant</option>
+   
+        </select>
+        <input type="file" formControlName="file" accept=".pdf, .doc, .docx, .jpg, .png" />
+         
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>

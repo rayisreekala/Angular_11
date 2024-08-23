@@ -1,0 +1,70 @@
+<p-toast position="bottom-right" key="br"></p-toast>
+<div class="login-body">
+    <div class="login-panel"></div>
+    <div class="login-content login">
+        <form [formGroup]="loginForm">
+            <h1><span>Welcome To Legal Lokam</span></h1>
+            <div class="login-input-wrapper">
+                <!-- <p-inputMask
+                    mask="(999) 999-9999"
+                    formControlName="number"
+                    placeholder="Phone Number"
+                ></p-inputMask> -->
+
+                <input type="text" autocomplete="off" placeholder="User Name" pInputText>
+                <i class="pi pi-user"></i>
+                <span
+                    class="validationtest"
+                    *ngIf="
+                        this.loginForm.get('number').touched &&
+                        this.loginForm.get('number').invalid &&
+                        this.loginForm.get('number').errors.required
+                    "
+                >
+                    Please enter number
+                </span>
+            </div>
+            <div class="login-input-wrapper">
+                <input
+                    type="password"
+                    autocomplete="off"
+                    formControlName="pswd"
+                    placeholder="Password"
+                    pInputText
+                />
+                <i class="pi pi-lock"></i>
+
+                <span
+                    class="validationtest"
+                    *ngIf="
+                        this.loginForm.get('pswd').touched &&
+                        this.loginForm.get('pswd').invalid &&
+                        this.loginForm.get('pswd').errors.required
+                    "
+                >
+                    Please enter password
+                </span>
+            </div>
+            <!-- <div class="p-grid ui-fluid">
+      <div class="p-col-4">
+        <div class="p-grid ui-fluid forgetCss">
+          <div class="p-col-4 p-offset-5">
+            <a style="text-align: center;cursor: pointer;" routerLink="/">Forgot password?</a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+            <!-- <button routerLink="/voters" pButton type="button" label="Sign In"></button> -->
+            <button
+                class="login-input-wrapper"
+                style="text-align: center"
+                (click)="login()"
+                [disabled]="button"
+                pButton
+                type="button"
+                label="Sign In"
+            ></button>
+            <div></div>
+        </form>
+    </div>
+</div>

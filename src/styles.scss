@@ -1,0 +1,149 @@
+@import "../node_modules/primeng/resources/primeng.min.css";
+@import "../node_modules/primeflex/primeflex.scss";
+@import "../node_modules/primeicons/primeicons.css";
+@import "../node_modules/prismjs/themes/prism-coy.css";
+@import "../node_modules/@fullcalendar/core/main.min.css";
+@import "../node_modules/@fullcalendar/daygrid/main.min.css";
+@import "../node_modules/@fullcalendar/timegrid/main.min.css";
+@import "assets/demo/flags/flags.css";
+.loading-bar {
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.laoderheight {
+    height: 520px;
+}
+
+.laodersize {
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loaderimg-height {
+    height: 5em;
+}
+
+.labelMaxLength {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.p-card .p-card-body {
+    padding: 0rem 1rem 0rem 1rem;
+}
+.blue .p-badge {
+    background: #2bb9d5;
+    width: 71px;
+  }
+  
+  .green .p-badge {
+    background: rgb(29, 187, 153);
+    width: 71px;
+  }
+  
+  .red .p-badge {
+    background: orange;
+    width: 71px;
+  }
+@media (min-width: 451px) and (max-width: 991px) {
+    .btnsCSS1 {
+        float: right;
+    }
+
+    .addhBtn {
+        width: 120px;
+        margin-left: 6px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1023px) {
+    .btnsCSS1 {
+        float: right;
+    }
+
+    .addhBtn {
+        width: 120px;
+        margin-left: 6px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 2660px) {
+    .btnsCSS1 {
+        float: right;
+    }
+
+    .addhBtn {
+        width: 120px;
+        margin-left: 6px;
+    }
+
+    .blue .p-badge {
+        background: #2bb9d5;
+        width: 71px;
+      }
+      
+      .green .p-badge {
+        background: rgb(29, 187, 153);
+        width: 71px;
+      }
+      
+      .red .p-badge {
+        background: orange;
+        width: 71px;
+      }
+
+}
+
+
+.p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+    outline: 0 none; 
+    outline-offset: 0; 
+     box-shadow: 0 0 0 0rem #ffffff; 
+}
+
+.p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    background: #ffffff;
+    color: #495057;
+    padding: 1rem 1.5rem 0rem 1.5rem;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+
+
+.validationtest {
+    color: red;
+}
+.p-toast .p-toast-message .p-toast-message-content {
+    padding: 1rem;
+    border-width: 0 0 0 6px;
+    color: white;
+    background-color: black;
+  }
+  
+  .p-toast .p-toast-message .p-toast-icon-close {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: white;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+  }
+.logoutBtn{
+    position: fixed;
+    right: 2%;
+
+}
+
